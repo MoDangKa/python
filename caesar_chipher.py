@@ -20,7 +20,7 @@ def caesar_cipher(text, shift_amount, direction):
 
 def get_valid_input(prompt, validation_func):
     while True:
-        user_input = input(prompt).lower()
+        user_input = input(prompt).strip().lower()
         if validation_func(user_input):
             return user_input
         print("Invalid input. Please try again.")
@@ -42,7 +42,7 @@ direction = get_valid_input(
     "Type 'encode' to encrypt, type 'decode' to decrypt:\n", validate_direction
 )
 
-text = input("Type your message:\n").lower()
+text = input("Type your message:\n").strip().lower()
 
 shift = int(get_valid_input("Type the shift number:\n", validate_shift))
 

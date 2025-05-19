@@ -18,7 +18,9 @@ def validate_yes_no(input_str):
 
 def get_name():
     while True:
-        name = input("What is your name?: ").strip()
+        name = input(
+            "What is your name?: "
+        ).strip()  # Added .strip() to remove whitespace from inputs
         if name:
             return name
         print("Name cannot be empty. Please try again.")
