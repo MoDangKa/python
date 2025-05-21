@@ -20,5 +20,13 @@ def get_input(
         return user_input if case_sensitive else user_input.lower()
 
 
-def validate_number(input_str):
+def validate_number_v1(input_str):
+    return input_str.isdigit()
+
+
+def validate_number_v2(input_str):
     return input_str.isdigit() and int(input_str) > 0
+
+
+def validate_yes_no(input_str):
+    return input_str.lower() in {"y", "n", "yes", "no"}

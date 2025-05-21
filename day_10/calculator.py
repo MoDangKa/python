@@ -1,7 +1,7 @@
 import sys
 
 sys.path.append("D:/Fork/python")
-from utils.utils import get_valid_input, validate_number
+from utils.utils import get_valid_input, validate_number_v1
 
 
 def validate_operation(input_str):
@@ -46,7 +46,7 @@ def calculator():
         a = int(
             get_valid_input(
                 "\nWhat's the first number?: ",
-                validate_number,
+                validate_number_v1,
                 "Please enter a valid whole number.",
             )
         )
@@ -56,11 +56,10 @@ def calculator():
             b = int(
                 get_valid_input(
                     "What's the next number?: ",
-                    validate_number,
+                    validate_number_v1,
                     "Please enter a valid whole number.",
                 )
             )
-
             result = perform_calculation(a, b, operator)
 
             if operator == "/" and b == 0:
