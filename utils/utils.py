@@ -47,3 +47,11 @@ def process_time(func):
         return result
 
     return wrapper
+
+
+def play_again():
+    return (
+        get_input("\nPlay again? (y/n): ", validate_yes_no, "Please enter 'y' or 'n'.")
+        .lower()
+        .startswith("y")
+    )
