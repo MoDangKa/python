@@ -1,7 +1,7 @@
 import sys
+import random
 
 sys.path.append("D:/Fork/python")
-import random
 from blackjack_arts import BLACKJACK_LOGO, get_card_art
 from utils.utils import get_input, validate_yes_no
 
